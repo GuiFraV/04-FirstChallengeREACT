@@ -13,6 +13,7 @@ function App() {
         customized with props */}
         <SkillList />
       </div>
+      <Footer />
     </div>
   );
 }
@@ -30,10 +31,10 @@ function Intro(){
 
 function SkillList(){
   return <div className="skill-list">
-    <Skill skill='React' emoji="👍" color='blue' />
-    <Skill skill='HTML+CSS' emoji="👍" color='red' />
-    <Skill skill='Svelte' emoji="👍" color='orange ' />
-    <Skill skill='Javascript' emoji="👍"  color='yellow' />
+    <Skill skill='React' emoji="👍" color='blue' level='Débutant' />
+    <Skill skill='HTML+CSS' emoji="👍" color='red' level='Avancé' />
+    <Skill skill='Svelte' emoji="👍" color='orange ' level='Intermédiaire' />
+    <Skill skill='Javascript' emoji="👍"  color='yellow' level='Avancé' />
   </div>
 }
 
@@ -46,6 +47,17 @@ function Skill(props){
       <span>
        {props.emoji}
       </span>
+      <span>
+       {props.level}
+      </span>
+    </div>
+  )
+}
+
+function Footer(){
+  return (
+    <div>
+      <p> Made with ❤️ by Guillaume</p>
     </div>
   )
 }
